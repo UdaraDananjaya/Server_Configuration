@@ -1,0 +1,1782 @@
+ubuntu@ip-172-31-28-127:~$ ls
+ubuntu@ip-172-31-28-127:~$ sudo apt install nginx -y #install Server Nginex
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libtiff5 libwebp6 libxpm4 nginx-common nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libtiff5 libwebp6 libxpm4 nginx nginx-common nginx-core
+0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2438 kB of archives.
+After this operation, 7925 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [10                                                                           41 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ub                                                                           untu3 [28.8 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubu                                                                           ntu3 [114 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0                                                                           .3-0ubuntu1.20.04.3 [118 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194                                                                            B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjbig0 amd64 2.1-3.1ub                                                                           untu0.20.04.1 [27.3 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libwebp6 amd64 0.6.1-2ub                                                                           untu0.20.04.3 [185 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff5 amd64 4.1.0+git                                                                           191117-2ubuntu0.20.04.12 [164 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libxpm4 amd64 1:3.5.12-1                                                                           ubuntu0.20.04.2 [34.9 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libgd3 amd64 2.2.5-5.2u                                                                           buntu2.1 [118 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0                                                                           -0ubuntu1.4 [37.7 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image                                                                           -filter amd64 1.18.0-0ubuntu1.4 [14.8 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-                                                                           filter amd64 1.18.0-0ubuntu1.4 [13.0 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64                                                                            1.18.0-0ubuntu1.4 [42.9 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd                                                                           64 1.18.0-0ubuntu1.4 [67.4 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0                                                                           -0ubuntu1.4 [425 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubunt                                                                           u1.4 [3620 B]
+Fetched 2438 kB in 0s (21.3 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package fonts-dejavu-core.
+(Reading database ... 62035 files and directories currently installed.)
+Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.3_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../05-libjbig0_2.1-3.1ubuntu0.20.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../06-libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../07-libtiff5_4.1.0+git191117-2ubuntu0.20.04.12_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.12) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1ubuntu0.20.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2.1_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2.1) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../12-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../13-libnginx-mod-mail_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../14-libnginx-mod-stream_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../15-nginx-core_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../16-nginx_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1.4) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Setting up nginx-common (1.18.0-0ubuntu1.4) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.                                                                           service.
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
+Setting up libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.12) ...
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2.1) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Setting up nginx-core (1.18.0-0ubuntu1.4) ...
+Setting up nginx (1.18.0-0ubuntu1.4) ...
+Processing triggers for ufw (0.36-6ubuntu1.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+ubuntu@ip-172-31-28-127:~$ sudo service nginx restart
+ubuntu@ip-172-31-28-127:~$ sudo iptables -P INPUT ACCEPT
+ubuntu@ip-172-31-28-127:~$ sudo iptables -P OUTPUT ACCEPT
+ubuntu@ip-172-31-28-127:~$ sudo iptables -P FORWARD ACCEPT
+ubuntu@ip-172-31-28-127:~$ sudo iptables -F
+ubuntu@ip-172-31-28-127:~$ sudo apt install mariadb-server -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  galera-3 libcgi-fast-perl libcgi-pm-perl libconfig-inifiles-perl libdbd-mysql-perl libdbi-perl
+  libencode-locale-perl libfcgi-perl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl
+  libhttp-date-perl libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmysqlclient21
+  libsnappy1v5 libterm-readkey-perl libtimedate-perl liburi-perl mariadb-client-10.3
+  mariadb-client-core-10.3 mariadb-common mariadb-server-10.3 mariadb-server-core-10.3 mysql-common
+  socat
+Suggested packages:
+  libclone-perl libmldbm-perl libnet-daemon-perl libsql-statement-perl libdata-dump-perl
+  libipc-sharedcache-perl libwww-perl mailx mariadb-test tinyca
+The following NEW packages will be installed:
+  galera-3 libcgi-fast-perl libcgi-pm-perl libconfig-inifiles-perl libdbd-mysql-perl libdbi-perl
+  libencode-locale-perl libfcgi-perl libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl
+  libhttp-date-perl libhttp-message-perl libio-html-perl liblwp-mediatypes-perl libmysqlclient21
+  libsnappy1v5 libterm-readkey-perl libtimedate-perl liburi-perl mariadb-client-10.3
+  mariadb-client-core-10.3 mariadb-common mariadb-server mariadb-server-10.3
+  mariadb-server-core-10.3 mysql-common socat
+0 upgraded, 28 newly installed, 0 to remove and 0 not upgraded.
+Need to get 21.5 MB of archives.
+After this operation, 175 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 mysql-common all 5.8+1.0.5ubuntu                                                                           2 [7496 B]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-common all 1                                                                           :10.3.39-0ubuntu0.20.04.2 [16.0 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 galera-3 amd64 25.3.29-1 [89                                                                           8 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libdbi-perl amd64 1.643-                                                                           1ubuntu0.1 [730 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libconfig-inifiles-perl all 3.00                                                                           0002-1 [40.6 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libsnappy1v5 amd64 1.1.8-1build1                                                                            [16.7 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-client-core-                                                                           10.3 amd64 1:10.3.39-0ubuntu0.20.04.2 [5872 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-client-10.3                                                                            amd64 1:10.3.39-0ubuntu0.20.04.2 [1127 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server-core-                                                                           10.3 amd64 1:10.3.39-0ubuntu0.20.04.2 [6250 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server-10.3                                                                            amd64 1:10.3.39-0ubuntu0.20.04.2 [4202 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-tagset-perl all 3.20-4                                                                            [12.5 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 liburi-perl all 1.76-2 [77.5 kB                                                                           ]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-parser-perl amd64 3.72-                                                                           5 [86.3 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-pm-perl all 4.46-1 [186                                                                            kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libfcgi-perl amd64 0.79-1 [33.1                                                                            kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-fast-perl all 1:2.15-1 [                                                                           10.5 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient21 amd64                                                                            8.0.36-0ubuntu0.20.04.1 [1302 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 libdbd-mysql-perl a                                                                           md64 4.050-3ubuntu0.2 [83.2 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libencode-locale-perl all 1.05-                                                                           1 [12.3 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-template-perl all 2.97-                                                                           1 [59.0 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libtimedate-perl all 2.3200-1 [                                                                           34.0 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libhttp-date-perl all 6.05-1 [9                                                                           920 B]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libio-html-perl all 1.001-1 [14                                                                           .9 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 liblwp-mediatypes-perl all 6.04                                                                           -1 [19.5 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libhttp-message-perl all 6.22-1                                                                            [76.1 kB]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libterm-readkey-perl amd64 2.38                                                                           -1build1 [24.6 kB]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server all                                                                            1:10.3.39-0ubuntu0.20.04.2 [12.7 kB]
+Fetched 21.5 MB in 0s (49.2 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 62262 files and directories currently installed.)
+Preparing to unpack .../0-mysql-common_5.8+1.0.5ubuntu2_all.deb ...
+Unpacking mysql-common (5.8+1.0.5ubuntu2) ...
+Selecting previously unselected package mariadb-common.
+Preparing to unpack .../1-mariadb-common_1%3a10.3.39-0ubuntu0.20.04.2_all.deb ...
+Unpacking mariadb-common (1:10.3.39-0ubuntu0.20.04.2) ...
+Selecting previously unselected package galera-3.
+Preparing to unpack .../2-galera-3_25.3.29-1_amd64.deb ...
+Unpacking galera-3 (25.3.29-1) ...
+Selecting previously unselected package libdbi-perl:amd64.
+Preparing to unpack .../3-libdbi-perl_1.643-1ubuntu0.1_amd64.deb ...
+Unpacking libdbi-perl:amd64 (1.643-1ubuntu0.1) ...
+Selecting previously unselected package libconfig-inifiles-perl.
+Preparing to unpack .../4-libconfig-inifiles-perl_3.000002-1_all.deb ...
+Unpacking libconfig-inifiles-perl (3.000002-1) ...
+Selecting previously unselected package libsnappy1v5:amd64.
+Preparing to unpack .../5-libsnappy1v5_1.1.8-1build1_amd64.deb ...
+Unpacking libsnappy1v5:amd64 (1.1.8-1build1) ...
+Selecting previously unselected package mariadb-client-core-10.3.
+Preparing to unpack .../6-mariadb-client-core-10.3_1%3a10.3.39-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking mariadb-client-core-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Selecting previously unselected package mariadb-client-10.3.
+Preparing to unpack .../7-mariadb-client-10.3_1%3a10.3.39-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking mariadb-client-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Selecting previously unselected package mariadb-server-core-10.3.
+Preparing to unpack .../8-mariadb-server-core-10.3_1%3a10.3.39-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking mariadb-server-core-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../9-socat_1.7.3.3-2_amd64.deb ...
+Unpacking socat (1.7.3.3-2) ...
+Setting up mysql-common (5.8+1.0.5ubuntu2) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mo                                                                           de
+Setting up mariadb-common (1:10.3.39-0ubuntu0.20.04.2) ...
+update-alternatives: using /etc/mysql/mariadb.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mariadb-server-10.3.
+(Reading database ... 62646 files and directories currently installed.)
+Preparing to unpack .../00-mariadb-server-10.3_1%3a10.3.39-0ubuntu0.20.04.2_amd64.deb ...
+Unpacking mariadb-server-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Selecting previously unselected package libhtml-tagset-perl.
+Preparing to unpack .../01-libhtml-tagset-perl_3.20-4_all.deb ...
+Unpacking libhtml-tagset-perl (3.20-4) ...
+Selecting previously unselected package liburi-perl.
+Preparing to unpack .../02-liburi-perl_1.76-2_all.deb ...
+Unpacking liburi-perl (1.76-2) ...
+Selecting previously unselected package libhtml-parser-perl.
+Preparing to unpack .../03-libhtml-parser-perl_3.72-5_amd64.deb ...
+Unpacking libhtml-parser-perl (3.72-5) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../04-libcgi-pm-perl_4.46-1_all.deb ...
+Unpacking libcgi-pm-perl (4.46-1) ...
+Selecting previously unselected package libfcgi-perl.
+Preparing to unpack .../05-libfcgi-perl_0.79-1_amd64.deb ...
+Unpacking libfcgi-perl (0.79-1) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../06-libcgi-fast-perl_1%3a2.15-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.15-1) ...
+Selecting previously unselected package libmysqlclient21:amd64.
+Preparing to unpack .../07-libmysqlclient21_8.0.36-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.36-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libdbd-mysql-perl:amd64.
+Preparing to unpack .../08-libdbd-mysql-perl_4.050-3ubuntu0.2_amd64.deb ...
+Unpacking libdbd-mysql-perl:amd64 (4.050-3ubuntu0.2) ...
+Selecting previously unselected package libencode-locale-perl.
+Preparing to unpack .../09-libencode-locale-perl_1.05-1_all.deb ...
+Unpacking libencode-locale-perl (1.05-1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../10-libhtml-template-perl_2.97-1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1) ...
+Selecting previously unselected package libtimedate-perl.
+Preparing to unpack .../11-libtimedate-perl_2.3200-1_all.deb ...
+Unpacking libtimedate-perl (2.3200-1) ...
+Selecting previously unselected package libhttp-date-perl.
+Preparing to unpack .../12-libhttp-date-perl_6.05-1_all.deb ...
+Unpacking libhttp-date-perl (6.05-1) ...
+Selecting previously unselected package libio-html-perl.
+Preparing to unpack .../13-libio-html-perl_1.001-1_all.deb ...
+Unpacking libio-html-perl (1.001-1) ...
+Selecting previously unselected package liblwp-mediatypes-perl.
+Preparing to unpack .../14-liblwp-mediatypes-perl_6.04-1_all.deb ...
+Unpacking liblwp-mediatypes-perl (6.04-1) ...
+Selecting previously unselected package libhttp-message-perl.
+Preparing to unpack .../15-libhttp-message-perl_6.22-1_all.deb ...
+Unpacking libhttp-message-perl (6.22-1) ...
+Selecting previously unselected package libterm-readkey-perl.
+Preparing to unpack .../16-libterm-readkey-perl_2.38-1build1_amd64.deb ...
+Unpacking libterm-readkey-perl (2.38-1build1) ...
+Selecting previously unselected package mariadb-server.
+Preparing to unpack .../17-mariadb-server_1%3a10.3.39-0ubuntu0.20.04.2_all.deb ...
+Unpacking mariadb-server (1:10.3.39-0ubuntu0.20.04.2) ...
+Setting up libconfig-inifiles-perl (3.000002-1) ...
+Setting up libmysqlclient21:amd64 (8.0.36-0ubuntu0.20.04.1) ...
+Setting up libhtml-tagset-perl (3.20-4) ...
+Setting up liblwp-mediatypes-perl (6.04-1) ...
+Setting up libencode-locale-perl (1.05-1) ...
+Setting up libsnappy1v5:amd64 (1.1.8-1build1) ...
+Setting up socat (1.7.3.3-2) ...
+Setting up mariadb-server-core-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Setting up libio-html-perl (1.001-1) ...
+Setting up galera-3 (25.3.29-1) ...
+Setting up libtimedate-perl (2.3200-1) ...
+Setting up mariadb-client-core-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Setting up libfcgi-perl (0.79-1) ...
+Setting up libterm-readkey-perl (2.38-1build1) ...
+Setting up liburi-perl (1.76-2) ...
+Setting up libdbi-perl:amd64 (1.643-1ubuntu0.1) ...
+Setting up libhttp-date-perl (6.05-1) ...
+Setting up mariadb-client-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Setting up libdbd-mysql-perl:amd64 (4.050-3ubuntu0.2) ...
+Setting up libhtml-parser-perl (3.72-5) ...
+Setting up mariadb-server-10.3 (1:10.3.39-0ubuntu0.20.04.2) ...
+Created symlink /etc/systemd/system/mysql.service → /lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/mysqld.service → /lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/mariadb.service → /lib/systemd/system/mari                                                                           adb.service.
+Setting up libhttp-message-perl (6.22-1) ...
+Setting up libcgi-pm-perl (4.46-1) ...
+Setting up libhtml-template-perl (2.97-1) ...
+Setting up mariadb-server (1:10.3.39-0ubuntu0.20.04.2) ...
+Setting up libcgi-fast-perl (1:2.15-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+ubuntu@ip-172-31-28-127:~$ sudo -i
+root@ip-172-31-28-127:~# mysql_secure_installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none):
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] y
+New password:
+Re-enter new password:
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] n
+ ... skipping.
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] n
+ ... skipping.
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] n
+ ... skipping.
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+root@ip-172-31-28-127:~# git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+root@ip-172-31-28-127:~# sudo apt -y install php7.4
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php7.4 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libjansson4 liblua5.2-0 php-common php7.4-cli
+  php7.4-common php7.4-json php7.4-opcache php7.4-readline ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser php-pear openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php7.4 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libjansson4 liblua5.2-0 php-common php7.4 php7.4-cli
+  php7.4-common php7.4-json php7.4-opcache php7.4-readline ssl-cert
+0 upgraded, 19 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5902 kB of archives.
+After this operation, 26.1 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libapr1 amd64 1.6.5-1ubuntu1 [91                                                                           .4 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1 amd64 1.6.1-                                                                           4ubuntu2.2 [85.1 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1-dbd-sqlite3                                                                            amd64 1.6.1-4ubuntu2.2 [10.5 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1-ldap amd64 1                                                                           .6.1-4ubuntu2.2 [8752 B]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libjansson4 amd64 2.12-1build1 [                                                                           28.9 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 liblua5.2-0 amd64 5.2.4-1.1build                                                                           3 [106 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-bin amd64 2.4.41                                                                           -4ubuntu3.16 [1187 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-data all 2.4.41-                                                                           4ubuntu3.16 [158 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-utils amd64 2.4.                                                                           41-4ubuntu3.16 [84.0 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2 amd64 2.4.41-4u                                                                           buntu3.16 [95.5 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-common all 2:75 [11.9 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-common amd64 7.4                                                                           .3-4ubuntu2.20 [983 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-json amd64 7.4.3                                                                           -4ubuntu2.20 [19.2 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-opcache amd64 7.                                                                           4.3-4ubuntu2.20 [198 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-readline amd64 7                                                                           .4.3-4ubuntu2.20 [12.6 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-cli amd64 7.4.3-                                                                           4ubuntu2.20 [1427 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libapache2-mod-php7.4 a                                                                           md64 7.4.3-4ubuntu2.20 [1369 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4 all 7.4.3-4ubunt                                                                           u2.20 [9236 B]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Fetched 5902 kB in 0s (38.9 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 63075 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.6.5-1ubuntu1_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.5-1ubuntu1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-4ubuntu2.2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2.2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2.2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-4ubuntu2.2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2.2) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../04-libjansson4_2.12-1build1_amd64.deb ...
+Unpacking libjansson4:amd64 (2.12-1build1) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../06-apache2-bin_2.4.41-4ubuntu3.16_amd64.deb ...
+Unpacking apache2-bin (2.4.41-4ubuntu3.16) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../07-apache2-data_2.4.41-4ubuntu3.16_all.deb ...
+Unpacking apache2-data (2.4.41-4ubuntu3.16) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../08-apache2-utils_2.4.41-4ubuntu3.16_amd64.deb ...
+Unpacking apache2-utils (2.4.41-4ubuntu3.16) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../09-apache2_2.4.41-4ubuntu3.16_amd64.deb ...
+Unpacking apache2 (2.4.41-4ubuntu3.16) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../10-php-common_2%3a75_all.deb ...
+Unpacking php-common (2:75) ...
+Selecting previously unselected package php7.4-common.
+Preparing to unpack .../11-php7.4-common_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-common (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php7.4-json.
+Preparing to unpack .../12-php7.4-json_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-json (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php7.4-opcache.
+Preparing to unpack .../13-php7.4-opcache_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-opcache (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php7.4-readline.
+Preparing to unpack .../14-php7.4-readline_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-readline (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php7.4-cli.
+Preparing to unpack .../15-php7.4-cli_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-cli (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package libapache2-mod-php7.4.
+Preparing to unpack .../16-libapache2-mod-php7.4_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking libapache2-mod-php7.4 (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php7.4.
+Preparing to unpack .../17-php7.4_7.4.3-4ubuntu2.20_all.deb ...
+Unpacking php7.4 (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../18-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Setting up php-common (2:75) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/ph                                                                           psessionclean.timer.
+Setting up php7.4-common (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/tokenizer.ini with new version
+Setting up libapr1:amd64 (1.6.5-1ubuntu1) ...
+Setting up php7.4-readline (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/readline.ini with new version
+Setting up libjansson4:amd64 (2.12-1build1) ...
+Setting up ssl-cert (1.0.39) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Setting up php7.4-opcache (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/opcache.ini with new version
+Setting up apache2-data (2.4.41-4ubuntu3.16) ...
+Setting up libaprutil1:amd64 (1.6.1-4ubuntu2.2) ...
+Setting up php7.4-json (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/json.ini with new version
+Setting up php7.4-cli (7.4.3-4ubuntu2.20) ...
+update-alternatives: using /usr/bin/php7.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.4 to provide /usr/bin/phar.phar (phar.phar) in auto mod                                                                           e
+
+Creating config file /etc/php/7.4/cli/php.ini with new version
+Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2.2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2.2) ...
+Setting up apache2-utils (2.4.41-4ubuntu3.16) ...
+Setting up apache2-bin (2.4.41-4ubuntu3.16) ...
+Setting up libapache2-mod-php7.4 (7.4.3-4ubuntu2.20) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php7.4.
+
+Creating config file /etc/php/7.4/apache2/php.ini with new version
+No module matches
+Setting up apache2 (2.4.41-4ubuntu3.16) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php7.4
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php7.4' for package libapache2-mod-php7.4
+Enabling module php7.4.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apac                                                                           he2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd                                                                           /system/apache-htcacheclean.service.
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript apache2, action "start" failed.
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2024-03-17 13:56:36 UTC; 10ms ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 23181 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+
+Mar 17 13:56:36 ip-172-31-28-127 systemd[1]: Starting The Apache HTTP Server...
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23184]: (98)Address already in use: AH00072: make_sock: cou                                                                           ld not bind to address [::]:80
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23184]: (98)Address already in use: AH00072: make_sock: cou                                                                           ld not bind to address 0.0.0.0:80
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23184]: no listening sockets available, shutting down
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23184]: AH00015: Unable to open logs
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23181]: Action 'start' failed.
+Mar 17 13:56:36 ip-172-31-28-127 apachectl[23181]: The Apache error log may have more information.
+Mar 17 13:56:36 ip-172-31-28-127 systemd[1]: apache2.service: Control process exited, code=exited, sta                                                                           tus=1/FAILURE
+Mar 17 13:56:36 ip-172-31-28-127 systemd[1]: apache2.service: Failed with result 'exit-code'.
+Mar 17 13:56:36 ip-172-31-28-127 systemd[1]: Failed to start The Apache HTTP Server.
+Setting up php7.4 (7.4.3-4ubuntu2.20) ...
+Processing triggers for ufw (0.36-6ubuntu1.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.20) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.20) ...
+root@ip-172-31-28-127:~# #check php version
+root@ip-172-31-28-127:~# php -v
+PHP 7.4.3-4ubuntu2.20 (cli) (built: Feb 21 2024 13:54:34) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3-4ubuntu2.20, Copyright (c), by Zend Technologies
+root@ip-172-31-28-127:~# sudo apt install php-fpm php-mysql -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  php7.4-fpm php7.4-mysql
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  php-fpm php-mysql php7.4-fpm php7.4-mysql
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1564 kB of archives.
+After this operation, 5373 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 php7.4-fpm amd64 7.4                                                                           .3-4ubuntu2.20 [1438 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-fpm all 2:7.4+75 [2792 B                                                                           ]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-mysql amd64 7.4.3                                                                           -4ubuntu2.20 [120 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-mysql all 2:7.4+75 [2000 B]
+Fetched 1564 kB in 0s (17.0 MB/s)
+Selecting previously unselected package php7.4-fpm.
+(Reading database ... 63934 files and directories currently installed.)
+Preparing to unpack .../php7.4-fpm_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-fpm (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-fpm.
+Preparing to unpack .../php-fpm_2%3a7.4+75_all.deb ...
+Unpacking php-fpm (2:7.4+75) ...
+Selecting previously unselected package php7.4-mysql.
+Preparing to unpack .../php7.4-mysql_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-mysql (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-mysql.
+Preparing to unpack .../php-mysql_2%3a7.4+75_all.deb ...
+Unpacking php-mysql (2:7.4+75) ...
+Setting up php7.4-mysql (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/pdo_mysql.ini with new version
+Setting up php7.4-fpm (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/fpm/php.ini with new version
+NOTICE: Not enabling PHP 7.4 FPM by default.
+NOTICE: To enable PHP 7.4 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php7.4-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+Created symlink /etc/systemd/system/multi-user.target.wants/php7.4-fpm.service → /lib/systemd/system/p                                                                           hp7.4-fpm.service.
+Setting up php-fpm (2:7.4+75) ...
+Setting up php-mysql (2:7.4+75) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.20) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.20) ...
+Processing triggers for php7.4-fpm (7.4.3-4ubuntu2.20) ...
+NOTICE: Not enabling PHP 7.4 FPM by default.
+NOTICE: To enable PHP 7.4 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php7.4-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+root@ip-172-31-28-127:~# "hh"
+hh: command not found
+root@ip-172-31-28-127:~# 'l'
+l: command not found
+root@ip-172-31-28-127:~# :'k'
+:k: command not found
+root@ip-172-31-28-127:~# : ' jh'
+root@ip-172-31-28-127:~# php -v
+PHP 7.4.3-4ubuntu2.20 (cli) (built: Feb 21 2024 13:54:34) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3-4ubuntu2.20, Copyright (c), by Zend Technologies
+root@ip-172-31-28-127:~# whareis apache2
+
+Command 'whareis' not found, did you mean:
+
+  command 'whereis' from deb util-linux (2.34-0.1ubuntu9.4)
+
+Try: apt install <deb name>
+
+root@ip-172-31-28-127:~# whare
+
+Command 'whare' not found, did you mean:
+
+  command 'share' from snap share (0.0.71)
+
+See 'snap info <snapname>' for additional versions.
+
+root@ip-172-31-28-127:~# service php7.4-fpm status
+● php7.4-fpm.service - The PHP 7.4 FastCGI Process Manager
+     Loaded: loaded (/lib/systemd/system/php7.4-fpm.service; enabled; vendor preset: e>
+     Active: active (running) since Sun 2024-03-17 13:57:31 UTC; 5min ago
+       Docs: man:php-fpm7.4(8)
+    Process: 25720 ExecStartPost=/usr/lib/php/php-fpm-socket-helper install /run/php/p>
+   Main PID: 25717 (php-fpm7.4)
+     Status: "Processes active: 0, idle: 2, Requests: 0, slow: 0, Traffic: 0req/sec"
+      Tasks: 3 (limit: 1126)
+     Memory: 6.9M
+     CGroup: /system.slice/php7.4-fpm.service
+             ├─25717 php-fpm: master process (/etc/php/7.4/fpm/php-fpm.conf)
+             ├─25718 php-fpm: pool www
+             └─25719 php-fpm: pool www
+
+Mar 17 13:57:31 ip-172-31-28-127 systemd[1]: Starting The PHP 7.4 FastCGI Process Mana>
+Mar 17 13:57:31 ip-172-31-28-127 systemd[1]: Started The PHP 7.4 FastCGI Process Manag>
+...skipping...
+● php7.4-fpm.service - The PHP 7.4 FastCGI Process Manager
+     Loaded: loaded (/lib/systemd/system/php7.4-fpm.service; enabled; vendor preset: e>
+     Active: active (running) since Sun 2024-03-17 13:57:31 UTC; 5min ago
+       Docs: man:php-fpm7.4(8)
+    Process: 25720 ExecStartPost=/usr/lib/php/php-fpm-socket-helper install /run/php/p>
+   Main PID: 25717 (php-fpm7.4)
+     Status: "Processes active: 0, idle: 2, Requests: 0, slow: 0, Traffic: 0req/sec"
+      Tasks: 3 (limit: 1126)
+     Memory: 6.9M
+     CGroup: /system.slice/php7.4-fpm.service
+             ├─25717 php-fpm: master process (/etc/php/7.4/fpm/php-fpm.conf)
+             ├─25718 php-fpm: pool www
+             └─25719 php-fpm: pool www
+
+Mar 17 13:57:31 ip-172-31-28-127 systemd[1]: Starting The PHP 7.4 FastCGI Process Mana>
+Mar 17 13:57:31 ip-172-31-28-127 systemd[1]: Started The PHP 7.4 FastCGI Process Manag>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-16/16 (END)
+^C
+root@ip-172-31-28-127:~# service php7.4-fpm restart
+root@ip-172-31-28-127:~# sudo apt install -y php-cli
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  php-cli
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2792 B of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-cli all 2:7.4                                                                                          +75 [2792 B]
+Fetched 2792 B in 0s (92.8 kB/s)
+Selecting previously unselected package php-cli.
+(Reading database ... 63976 files and directories currently installed.)
+Preparing to unpack .../php-cli_2%3a7.4+75_all.deb ...
+Unpacking php-cli (2:7.4+75) ...
+Setting up php-cli (2:7.4+75) ...
+root@ip-172-31-28-127:~# sudo apt install -y php-cli php-common php-zip php-gd php-mbst                                                                                          ring php-curl php-xml php-bcmath
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+php-cli is already the newest version (2:7.4+75).
+php-common is already the newest version (2:75).
+php-common set to manually installed.
+The following additional packages will be installed:
+  libonig5 libzip5 php7.4-bcmath php7.4-curl php7.4-gd php7.4-mbstring php7.4-xml
+  php7.4-zip
+The following NEW packages will be installed:
+  libonig5 libzip5 php-bcmath php-curl php-gd php-mbstring php-xml php-zip
+  php7.4-bcmath php7.4-curl php7.4-gd php7.4-mbstring php7.4-xml php7.4-zip
+0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+Need to get 790 kB of archives.
+After this operation, 2815 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 libonig5 amd6                                                                                          4 6.9.4-1 [142 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 libzip5 amd64                                                                                           1.5.1-0ubuntu1 [46.7 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 php7.                                                                                          4-bcmath amd64 7.4.3-4ubuntu2.20 [15.1 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-bcmath al                                                                                          l 2:7.4+75 [2004 B]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-cu                                                                                          rl amd64 7.4.3-4ubuntu2.20 [30.9 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-curl all 2:7.                                                                                          4+75 [2000 B]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-gd                                                                                           amd64 7.4.3-4ubuntu2.20 [27.9 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-gd all 2:7.4+                                                                                          75 [2000 B]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 php7.                                                                                          4-mbstring amd64 7.4.3-4ubuntu2.20 [396 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-mbstring                                                                                           all 2:7.4+75 [2012 B]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 php7.4-x                                                                                          ml amd64 7.4.3-4ubuntu2.20 [98.8 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 php-xml all 2:7.                                                                                          4+75 [2028 B]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 php7                                                                                          .4-zip amd64 7.4.3-4ubuntu2.20 [21.5 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-zip all                                                                                           2:7.4+75 [1996 B]
+Fetched 790 kB in 0s (8227 kB/s)
+Selecting previously unselected package libonig5:amd64.
+(Reading database ... 63979 files and directories currently installed.)
+Preparing to unpack .../00-libonig5_6.9.4-1_amd64.deb ...
+Unpacking libonig5:amd64 (6.9.4-1) ...
+Selecting previously unselected package libzip5:amd64.
+Preparing to unpack .../01-libzip5_1.5.1-0ubuntu1_amd64.deb ...
+Unpacking libzip5:amd64 (1.5.1-0ubuntu1) ...
+Selecting previously unselected package php7.4-bcmath.
+Preparing to unpack .../02-php7.4-bcmath_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-bcmath (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-bcmath.
+Preparing to unpack .../03-php-bcmath_2%3a7.4+75_all.deb ...
+Unpacking php-bcmath (2:7.4+75) ...
+Selecting previously unselected package php7.4-curl.
+Preparing to unpack .../04-php7.4-curl_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-curl (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-curl.
+Preparing to unpack .../05-php-curl_2%3a7.4+75_all.deb ...
+Unpacking php-curl (2:7.4+75) ...
+Selecting previously unselected package php7.4-gd.
+Preparing to unpack .../06-php7.4-gd_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-gd (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-gd.
+Preparing to unpack .../07-php-gd_2%3a7.4+75_all.deb ...
+Unpacking php-gd (2:7.4+75) ...
+Selecting previously unselected package php7.4-mbstring.
+Preparing to unpack .../08-php7.4-mbstring_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-mbstring (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-mbstring.
+Preparing to unpack .../09-php-mbstring_2%3a7.4+75_all.deb ...
+Unpacking php-mbstring (2:7.4+75) ...
+Selecting previously unselected package php7.4-xml.
+Preparing to unpack .../10-php7.4-xml_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-xml (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-xml.
+Preparing to unpack .../11-php-xml_2%3a7.4+75_all.deb ...
+Unpacking php-xml (2:7.4+75) ...
+Selecting previously unselected package php7.4-zip.
+Preparing to unpack .../12-php7.4-zip_7.4.3-4ubuntu2.20_amd64.deb ...
+Unpacking php7.4-zip (7.4.3-4ubuntu2.20) ...
+Selecting previously unselected package php-zip.
+Preparing to unpack .../13-php-zip_2%3a7.4+75_all.deb ...
+Unpacking php-zip (2:7.4+75) ...
+Setting up php7.4-xml (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/dom.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xml.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/7.4/mods-available/xsl.ini with new version
+Setting up php7.4-curl (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/curl.ini with new version
+Setting up libzip5:amd64 (1.5.1-0ubuntu1) ...
+Setting up php7.4-bcmath (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/bcmath.ini with new version
+Setting up php7.4-zip (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/zip.ini with new version
+Setting up php-zip (2:7.4+75) ...
+Setting up libonig5:amd64 (6.9.4-1) ...
+Setting up php7.4-gd (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/gd.ini with new version
+Setting up php-xml (2:7.4+75) ...
+Setting up php-curl (2:7.4+75) ...
+Setting up php-bcmath (2:7.4+75) ...
+Setting up php7.4-mbstring (7.4.3-4ubuntu2.20) ...
+
+Creating config file /etc/php/7.4/mods-available/mbstring.ini with new version
+Setting up php-mbstring (2:7.4+75) ...
+Setting up php-gd (2:7.4+75) ...
+Processing triggers for php7.4-fpm (7.4.3-4ubuntu2.20) ...
+NOTICE: Not enabling PHP 7.4 FPM by default.
+NOTICE: To enable PHP 7.4 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php7.4-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+Processing triggers for libapache2-mod-php7.4 (7.4.3-4ubuntu2.20) ...
+Processing triggers for php7.4-cli (7.4.3-4ubuntu2.20) ...
+root@ip-172-31-28-127:~# php -r "copy('https://getcomposer.org/installer', 'composer-se                                                                                          tup.php');"
+root@ip-172-31-28-127:~# php composer-setup.php
+All settings correct for using Composer
+Downloading...
+
+Composer (version 2.7.2) successfully installed to: /root/composer.phar
+Use it: php composer.phar
+
+root@ip-172-31-28-127:~# php -r "unlink('composer-setup.php');"
+root@ip-172-31-28-127:~# sudo mv composer.phar /usr/local/bin/composer
+root@ip-172-31-28-127:~# composer
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Continue as root/super user [yes]? yes
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.7.2 2024-03-11 17:12:18
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is                                                                                           given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer                                                                                          .json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working direc                                                                                          tory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal outpu                                                                                          t, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packa                                                                                          ges
+  browse               [home] Opens the package's repository URL or homepage in your br                                                                                          owser
+  bump                 Increases the lower limit of your composer.json requirements to                                                                                           the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be install                                                                                          ed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HO                                                                                          ME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock fil                                                                                          e if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available,                                                                                           including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from be                                                                                          ing installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               [rm] Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs th                                                                                          em
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version acco                                                                                          rding to composer.json, and updates the composer.lock file
+  validate             Validates a composer.json and composer.lock
+root@ip-172-31-28-127:~# composer
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Continue as root/super user [yes]? yes
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.7.2 2024-03-11 17:12:18
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is                                                                                           given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer                                                                                          .json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working direc                                                                                          tory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal outpu                                                                                          t, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packa                                                                                          ges
+  browse               [home] Opens the package's repository URL or homepage in your br                                                                                          owser
+  bump                 Increases the lower limit of your composer.json requirements to                                                                                           the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be install                                                                                          ed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HO                                                                                          ME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock fil                                                                                          e if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available,                                                                                           including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from be                                                                                          ing installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               [rm] Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs th                                                                                          em
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version acco                                                                                          rding to composer.json, and updates the composer.lock file
+  validate             Validates a composer.json and composer.lock
+root@ip-172-31-28-127:~# sudo apt install git -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+git is already the newest version (1:2.25.1-1ubuntu3.11).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@ip-172-31-28-127:~# sudo apt install -y openssl php-bcmath php-curl php-json php-m                                                                                          bstring php-mysql php-tokenizer php-xml php-zip
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+php-curl is already the newest version (2:7.4+75).
+php-mysql is already the newest version (2:7.4+75).
+php-xml is already the newest version (2:7.4+75).
+php-bcmath is already the newest version (2:7.4+75).
+php-mbstring is already the newest version (2:7.4+75).
+php-zip is already the newest version (2:7.4+75).
+openssl is already the newest version (1.1.1f-1ubuntu2.22).
+openssl set to manually installed.
+The following NEW packages will be installed:
+  php-json php-tokenizer
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7980 B of archives.
+After this operation, 44.0 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-json all                                                                                           2:7.4+75 [2000 B]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 php-tokenizer                                                                                           all 1.1.3-2 [5980 B]
+Fetched 7980 B in 0s (160 kB/s)
+Selecting previously unselected package php-json.
+(Reading database ... 64072 files and directories currently installed.)
+Preparing to unpack .../php-json_2%3a7.4+75_all.deb ...
+Unpacking php-json (2:7.4+75) ...
+Selecting previously unselected package php-tokenizer.
+Preparing to unpack .../php-tokenizer_1.1.3-2_all.deb ...
+Unpacking php-tokenizer (1.1.3-2) ...
+Setting up php-json (2:7.4+75) ...
+Setting up php-tokenizer (1.1.3-2) ...
+root@ip-172-31-28-127:~# pwd
+/root
+root@ip-172-31-28-127:~#
+Using username "ubuntu".
+Authenticating with public key "Server_Keys"
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1055-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Sun Mar 17 14:39:41 UTC 2024
+
+  System load:  0.07              Processes:             115
+  Usage of /:   7.3% of 28.89GB   Users logged in:       1
+  Memory usage: 33%               IPv4 address for eth0: 172.31.28.127
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Mar 17 13:39:35 2024 from 112.134.224.103
+ubuntu@ip-172-31-28-127:~$
+Using username "ubuntu".
+Authenticating with public key "Server_Keys"
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1055-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Sun Mar 17 16:30:26 UTC 2024
+
+  System load:  0.0               Processes:             112
+  Usage of /:   7.3% of 28.89GB   Users logged in:       1
+  Memory usage: 33%               IPv4 address for eth0: 172.31.28.127
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Mar 17 14:39:42 2024 from 112.134.224.103
+ubuntu@ip-172-31-28-127:~$ cd
+ubuntu@ip-172-31-28-127:~$ cd /var
+ubuntu@ip-172-31-28-127:/var$ cd www
+ubuntu@ip-172-31-28-127:/var/www$ ls
+html
+ubuntu@ip-172-31-28-127:/var/www$ mkdir laravel
+mkdir: cannot create directory ‘laravel’: Permission denied
+ubuntu@ip-172-31-28-127:/var/www$ sudo mkdir laravel
+ubuntu@ip-172-31-28-127:/var/www$ ^C
+ubuntu@ip-172-31-28-127:/var/www$ cd laravel
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo chown -R ubuntu /var/www/laravel
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo chmod -R 777 /var/www/laravel
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ git clone https://github.com/PayMediaLK/NSB_F                                                                                          2F_Kyc_BackEnd.git
+Cloning into 'NSB_F2F_Kyc_BackEnd'...
+Username for 'https://github.com': gitv1
+Password for 'https://gitv1@github.com':
+remote: Enumerating objects: 2432, done.
+remote: Counting objects: 100% (2432/2432), done.
+remote: Compressing objects: 100% (804/804), done.
+remote: Total 2432 (delta 1493), reused 2401 (delta 1462), pack-reused 0
+Receiving objects: 100% (2432/2432), 6.42 MiB | 24.07 MiB/s, done.
+Resolving deltas: 100% (1493/1493), done.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ composer install
+Composer could not detect the root package (laravel/laravel) version, defaulting to '1.                                                                                          0.0'. See https://getcomposer.org/root-version
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Package operations: 116 installs, 0 updates, 0 removals
+As there is no 'unzip' nor '7z' command installed zip files are being unpacked using th                                                                                          e PHP zip extension.
+This may cause invalid reports of corrupted archives. Besides, any UNIX permissions (e.                                                                                          g. executable) defined in the archives will be lost.
+Installing 'unzip' or '7z' (21.01+) may remediate them.
+  - Downloading psr/log (1.1.4)
+  - Downloading psr/cache (1.0.1)
+  - Downloading doctrine/event-manager (1.1.1)
+  - Downloading doctrine/deprecations (v0.5.3)
+  - Downloading doctrine/cache (2.1.1)
+  - Downloading doctrine/dbal (3.3.5)
+  - Downloading doctrine/inflector (2.0.4)
+  - Downloading doctrine/lexer (1.2.3)
+  - Downloading symfony/polyfill-ctype (v1.25.0)
+  - Downloading webmozart/assert (1.10.0)
+  - Downloading dragonmantank/cron-expression (v3.3.1)
+  - Downloading symfony/polyfill-php80 (v1.25.0)
+  - Downloading symfony/polyfill-mbstring (v1.25.0)
+  - Downloading symfony/var-dumper (v5.4.6)
+  - Downloading symfony/polyfill-intl-normalizer (v1.25.0)
+  - Downloading symfony/polyfill-intl-grapheme (v1.25.0)
+  - Downloading symfony/string (v5.4.3)
+  - Downloading symfony/deprecation-contracts (v2.5.1)
+  - Downloading psr/container (1.1.2)
+  - Downloading symfony/service-contracts (v2.5.1)
+  - Downloading symfony/polyfill-php73 (v1.25.0)
+  - Downloading symfony/console (v5.4.7)
+  - Downloading monolog/monolog (2.5.0)
+  - Downloading voku/portable-ascii (1.6.1)
+  - Downloading phpoption/phpoption (1.8.1)
+  - Downloading graham-campbell/result-type (v1.0.4)
+  - Downloading vlucas/phpdotenv (v5.4.1)
+  - Downloading symfony/css-selector (v5.4.3)
+  - Downloading tijsverkoyen/css-to-inline-styles (2.2.4)
+  - Downloading symfony/routing (v5.4.3)
+  - Downloading symfony/process (v5.4.7)
+  - Downloading symfony/polyfill-php72 (v1.25.0)
+  - Downloading symfony/polyfill-intl-idn (v1.25.0)
+  - Downloading symfony/mime (v5.4.7)
+  - Downloading symfony/http-foundation (v5.4.6)
+  - Downloading psr/event-dispatcher (1.0.0)
+  - Downloading symfony/event-dispatcher-contracts (v2.5.1)
+  - Downloading symfony/event-dispatcher (v5.4.3)
+  - Downloading symfony/error-handler (v5.4.7)
+  - Downloading symfony/http-kernel (v5.4.7)
+  - Downloading symfony/finder (v5.4.3)
+  - Downloading symfony/polyfill-iconv (v1.25.0)
+  - Downloading egulias/email-validator (2.1.25)
+  - Downloading swiftmailer/swiftmailer (v6.3.0)
+  - Downloading symfony/polyfill-php81 (v1.25.0)
+  - Downloading ramsey/collection (1.2.2)
+  - Downloading brick/math (0.9.3)
+  - Downloading ramsey/uuid (4.2.3)
+  - Downloading psr/simple-cache (1.0.1)
+  - Downloading opis/closure (3.6.3)
+  - Downloading symfony/translation-contracts (v2.5.1)
+  - Downloading symfony/translation (v5.4.7)
+  - Downloading nesbot/carbon (2.57.0)
+  - Downloading league/mime-type-detection (1.11.0)
+  - Downloading league/flysystem (1.1.9)
+  - Downloading nette/utils (v3.2.7)
+  - Downloading nette/schema (v1.2.2)
+  - Downloading dflydev/dot-access-data (v3.0.1)
+  - Downloading league/config (v1.1.1)
+  - Downloading league/commonmark (2.3.0)
+  - Downloading laravel/serializable-closure (v1.1.1)
+  - Downloading laravel/framework (v8.83.9)
+  - Downloading facade/ignition-contracts (1.0.2)
+  - Downloading facade/flare-client-php (1.9.1)
+  - Downloading facade/ignition (2.17.5)
+  - Downloading fideloper/proxy (4.4.1)
+  - Downloading asm89/stack-cors (v2.1.1)
+  - Downloading fruitcake/laravel-cors (v2.2.0)
+  - Downloading fzaninotto/faker (v1.9.2)
+  - Downloading psr/http-message (1.0.1)
+  - Downloading psr/http-client (1.0.1)
+  - Downloading ralouphie/getallheaders (3.0.3)
+  - Downloading psr/http-factory (1.0.1)
+  - Downloading guzzlehttp/psr7 (2.2.1)
+  - Downloading guzzlehttp/promises (1.5.1)
+  - Downloading guzzlehttp/guzzle (7.4.2)
+  - Downloading nikic/php-parser (v4.13.2)
+  - Downloading psy/psysh (v0.11.2)
+  - Downloading laravel/tinker (v2.7.2)
+  - Downloading hamcrest/hamcrest-php (v2.0.1)
+  - Downloading mockery/mockery (1.5.0)
+  - Downloading filp/whoops (2.14.5)
+  - Downloading nunomaduro/collision (v5.11.0)
+  - Downloading orangehill/iseed (v3.0.2)
+  - Downloading phpdocumentor/reflection-common (2.2.0)
+  - Downloading phpdocumentor/type-resolver (1.6.1)
+  - Downloading phpdocumentor/reflection-docblock (5.3.0)
+  - Downloading sebastian/version (3.0.2)
+  - Downloading sebastian/type (3.0.0)
+  - Downloading sebastian/resource-operations (3.0.3)
+  - Downloading sebastian/recursion-context (4.0.4)
+  - Downloading sebastian/object-reflector (2.0.4)
+  - Downloading sebastian/object-enumerator (4.0.4)
+  - Downloading sebastian/global-state (5.0.5)
+  - Downloading sebastian/exporter (4.0.4)
+  - Downloading sebastian/environment (5.1.4)
+  - Downloading sebastian/diff (4.0.4)
+  - Downloading sebastian/comparator (4.0.6)
+  - Downloading sebastian/code-unit (1.0.8)
+  - Downloading sebastian/cli-parser (1.0.1)
+  - Downloading phpunit/php-timer (5.0.3)
+  - Downloading phpunit/php-text-template (2.0.4)
+  - Downloading phpunit/php-invoker (3.1.1)
+  - Downloading phpunit/php-file-iterator (3.0.6)
+  - Downloading theseer/tokenizer (1.2.1)
+  - Downloading sebastian/lines-of-code (1.0.3)
+  - Downloading sebastian/complexity (2.0.2)
+  - Downloading sebastian/code-unit-reverse-lookup (2.0.3)
+  - Downloading phpunit/php-code-coverage (9.2.15)
+  - Downloading doctrine/instantiator (1.4.1)
+  - Downloading phpspec/prophecy (v1.15.0)
+  - Downloading phar-io/version (3.2.1)
+  - Downloading phar-io/manifest (2.0.3)
+  - Downloading myclabs/deep-copy (1.11.0)
+  - Downloading phpunit/phpunit (9.5.20)
+  - Downloading shoutoutlabs/shoutout-sdk (3.0.0)
+  - Installing psr/log (1.1.4): Extracting archive
+  - Installing psr/cache (1.0.1): Extracting archive
+  - Installing doctrine/event-manager (1.1.1): Extracting archive
+  - Installing doctrine/deprecations (v0.5.3): Extracting archive
+  - Installing doctrine/cache (2.1.1): Extracting archive
+  - Installing doctrine/dbal (3.3.5): Extracting archive
+  - Installing doctrine/inflector (2.0.4): Extracting archive
+  - Installing doctrine/lexer (1.2.3): Extracting archive
+  - Installing symfony/polyfill-ctype (v1.25.0): Extracting archive
+  - Installing webmozart/assert (1.10.0): Extracting archive
+  - Installing dragonmantank/cron-expression (v3.3.1): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.25.0): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.25.0): Extracting archive
+  - Installing symfony/var-dumper (v5.4.6): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.25.0): Extracting archive
+  - Installing symfony/polyfill-intl-grapheme (v1.25.0): Extracting archive
+  - Installing symfony/string (v5.4.3): Extracting archive
+  - Installing symfony/deprecation-contracts (v2.5.1): Extracting archive
+  - Installing psr/container (1.1.2): Extracting archive
+  - Installing symfony/service-contracts (v2.5.1): Extracting archive
+  - Installing symfony/polyfill-php73 (v1.25.0): Extracting archive
+  - Installing symfony/console (v5.4.7): Extracting archive
+  - Installing monolog/monolog (2.5.0): Extracting archive
+  - Installing voku/portable-ascii (1.6.1): Extracting archive
+  - Installing phpoption/phpoption (1.8.1): Extracting archive
+  - Installing graham-campbell/result-type (v1.0.4): Extracting archive
+  - Installing vlucas/phpdotenv (v5.4.1): Extracting archive
+  - Installing symfony/css-selector (v5.4.3): Extracting archive
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.4): Extracting archive
+  - Installing symfony/routing (v5.4.3): Extracting archive
+  - Installing symfony/process (v5.4.7): Extracting archive
+  - Installing symfony/polyfill-php72 (v1.25.0): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.25.0): Extracting archive
+  - Installing symfony/mime (v5.4.7): Extracting archive
+  - Installing symfony/http-foundation (v5.4.6): Extracting archive
+  - Installing psr/event-dispatcher (1.0.0): Extracting archive
+  - Installing symfony/event-dispatcher-contracts (v2.5.1): Extracting archive
+  - Installing symfony/event-dispatcher (v5.4.3): Extracting archive
+  - Installing symfony/error-handler (v5.4.7): Extracting archive
+  - Installing symfony/http-kernel (v5.4.7): Extracting archive
+  - Installing symfony/finder (v5.4.3): Extracting archive
+  - Installing symfony/polyfill-iconv (v1.25.0): Extracting archive
+  - Installing egulias/email-validator (2.1.25): Extracting archive
+  - Installing swiftmailer/swiftmailer (v6.3.0): Extracting archive
+  - Installing symfony/polyfill-php81 (v1.25.0): Extracting archive
+  - Installing ramsey/collection (1.2.2): Extracting archive
+  - Installing brick/math (0.9.3): Extracting archive
+  - Installing ramsey/uuid (4.2.3): Extracting archive
+  - Installing psr/simple-cache (1.0.1): Extracting archive
+  - Installing opis/closure (3.6.3): Extracting archive
+  - Installing symfony/translation-contracts (v2.5.1): Extracting archive
+  - Installing symfony/translation (v5.4.7): Extracting archive
+  - Installing nesbot/carbon (2.57.0): Extracting archive
+  - Installing league/mime-type-detection (1.11.0): Extracting archive
+  - Installing league/flysystem (1.1.9): Extracting archive
+  - Installing nette/utils (v3.2.7): Extracting archive
+  - Installing nette/schema (v1.2.2): Extracting archive
+  - Installing dflydev/dot-access-data (v3.0.1): Extracting archive
+  - Installing league/config (v1.1.1): Extracting archive
+  - Installing league/commonmark (2.3.0): Extracting archive
+  - Installing laravel/serializable-closure (v1.1.1): Extracting archive
+  - Installing laravel/framework (v8.83.9): Extracting archive
+  - Installing facade/ignition-contracts (1.0.2): Extracting archive
+  - Installing facade/flare-client-php (1.9.1): Extracting archive
+  - Installing facade/ignition (2.17.5): Extracting archive
+  - Installing fideloper/proxy (4.4.1): Extracting archive
+  - Installing asm89/stack-cors (v2.1.1): Extracting archive
+  - Installing fruitcake/laravel-cors (v2.2.0): Extracting archive
+  - Installing fzaninotto/faker (v1.9.2): Extracting archive
+  - Installing psr/http-message (1.0.1): Extracting archive
+  - Installing psr/http-client (1.0.1): Extracting archive
+  - Installing ralouphie/getallheaders (3.0.3): Extracting archive
+  - Installing psr/http-factory (1.0.1): Extracting archive
+  - Installing guzzlehttp/psr7 (2.2.1): Extracting archive
+  - Installing guzzlehttp/promises (1.5.1): Extracting archive
+  - Installing guzzlehttp/guzzle (7.4.2): Extracting archive
+  - Installing nikic/php-parser (v4.13.2): Extracting archive
+  - Installing psy/psysh (v0.11.2): Extracting archive
+  - Installing laravel/tinker (v2.7.2): Extracting archive
+  - Installing hamcrest/hamcrest-php (v2.0.1): Extracting archive
+  - Installing mockery/mockery (1.5.0): Extracting archive
+  - Installing filp/whoops (2.14.5): Extracting archive
+  - Installing nunomaduro/collision (v5.11.0): Extracting archive
+  - Installing orangehill/iseed (v3.0.2): Extracting archive
+  - Installing phpdocumentor/reflection-common (2.2.0): Extracting archive
+  - Installing phpdocumentor/type-resolver (1.6.1): Extracting archive
+  - Installing phpdocumentor/reflection-docblock (5.3.0): Extracting archive
+  - Installing sebastian/version (3.0.2): Extracting archive
+  - Installing sebastian/type (3.0.0): Extracting archive
+  - Installing sebastian/resource-operations (3.0.3): Extracting archive
+  - Installing sebastian/recursion-context (4.0.4): Extracting archive
+  - Installing sebastian/object-reflector (2.0.4): Extracting archive
+  - Installing sebastian/object-enumerator (4.0.4): Extracting archive
+  - Installing sebastian/global-state (5.0.5): Extracting archive
+  - Installing sebastian/exporter (4.0.4): Extracting archive
+  - Installing sebastian/environment (5.1.4): Extracting archive
+  - Installing sebastian/diff (4.0.4): Extracting archive
+  - Installing sebastian/comparator (4.0.6): Extracting archive
+  - Installing sebastian/code-unit (1.0.8): Extracting archive
+  - Installing sebastian/cli-parser (1.0.1): Extracting archive
+  - Installing phpunit/php-timer (5.0.3): Extracting archive
+  - Installing phpunit/php-text-template (2.0.4): Extracting archive
+  - Installing phpunit/php-invoker (3.1.1): Extracting archive
+  - Installing phpunit/php-file-iterator (3.0.6): Extracting archive
+  - Installing theseer/tokenizer (1.2.1): Extracting archive
+  - Installing sebastian/lines-of-code (1.0.3): Extracting archive
+  - Installing sebastian/complexity (2.0.2): Extracting archive
+  - Installing sebastian/code-unit-reverse-lookup (2.0.3): Extracting archive
+  - Installing phpunit/php-code-coverage (9.2.15): Extracting archive
+  - Installing doctrine/instantiator (1.4.1): Extracting archive
+  - Installing phpspec/prophecy (v1.15.0): Extracting archive
+  - Installing phar-io/version (3.2.1): Extracting archive
+  - Installing phar-io/manifest (2.0.3): Extracting archive
+  - Installing myclabs/deep-copy (1.11.0): Extracting archive
+  - Installing phpunit/phpunit (9.5.20): Extracting archive
+  - Installing shoutoutlabs/shoutout-sdk (3.0.0): Extracting archive
+Package swiftmailer/swiftmailer is abandoned, you should avoid using it. Use symfony/ma                                                                                          iler instead.
+Package fzaninotto/faker is abandoned, you should avoid using it. No replacement was su                                                                                          ggested.
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Discovered Package: facade/ignition
+Discovered Package: fideloper/proxy
+Discovered Package: fruitcake/laravel-cors
+Discovered Package: laravel/tinker
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Discovered Package: orangehill/iseed
+Package manifest generated successfully.
+80 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+ubuntu@ip-172-31-28-127:/var/www/laravel$ php artisan serve
+Starting Laravel development server: http://127.0.0.1:8000
+[Sun Mar 17 16:36:26 2024] PHP 7.4.3-4ubuntu2.20 Development Server (http://127.0.0.1:8                                                                                          000) started
+^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ service nginx restart
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'nginx.service'.
+Authenticating as: Ubuntu (ubuntu)
+Password:
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ service nginx restart
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'nginx.service'.
+Authenticating as: Ubuntu (ubuntu)
+Password:
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enable>
+     Active: failed (Result: exit-code) since Sun 2024-03-17 16:45:29 UTC; 14s ago
+       Docs: man:nginx(8)
+    Process: 30839 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on;>
+
+Mar 17 16:45:29 ip-172-31-28-127 systemd[1]: Starting A high performance web server an>
+Mar 17 16:45:29 ip-172-31-28-127 nginx[30839]: nginx: [emerg] "server" directive is no>
+Mar 17 16:45:29 ip-172-31-28-127 nginx[30839]: nginx: configuration file /etc/nginx/ng>
+Mar 17 16:45:29 ip-172-31-28-127 systemd[1]: nginx.service: Control process exited, co>
+Mar 17 16:45:29 ip-172-31-28-127 systemd[1]: nginx.service: Failed with result 'exit-c>
+Mar 17 16:45:29 ip-172-31-28-127 systemd[1]: Failed to start A high performance web se>
+lines 1-12/12 (END)
+^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ /var/log/nginx/error.log
+-bash: /var/log/nginx/error.log: Permission denied
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo /var/log/nginx/error.log
+sudo: /var/log/nginx/error.log: command not found
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo cat /var/log/nginx/error.log
+2024/03/17 16:41:23 [emerg] 30769#30769: "server" directive is not allowed here in /etc                                                                                          /nginx/nginx.conf:89
+2024/03/17 16:42:39 [emerg] 30827#30827: "server" directive is not allowed here in /etc                                                                                          /nginx/nginx.conf:89
+2024/03/17 16:45:29 [emerg] 30839#30839: "server" directive is not allowed here in /etc                                                                                          /nginx/nginx.conf:89
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/nginx/nginx.conf
+ubuntu@ip-172-31-28-127:/var/www/laravel$  include /etc/nginx/sites-enabled/*;
+include: command not found
+ubuntu@ip-172-31-28-127:/var/www/laravel$ cd  /etc/nginx/sites-enabled/
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ ls
+default
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ default
+
+Command 'default' not found, did you mean:
+
+  command 'defaults' from deb gnustep-base-runtime (1.26.0-7)
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ cat default
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# https://www.nginx.com/resources/wiki/start/
+# https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+# https://wiki.debian.org/Nginx/DirectoryStructure
+#
+# In most cases, administrators will remove this file from sites-enabled/ and
+# leave it as reference inside of sites-available where it will continue to be
+# updated by the nginx packaging team.
+#
+# This file will automatically load configuration files provided by other
+# applications, such as Drupal or Wordpress. These applications will be made
+# available underneath a path with that package name, such as /drupal8.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don't use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        # pass PHP scripts to FastCGI server
+        #
+        #location ~ \.php$ {
+        #       include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+        #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        #       # With php-cgi (or other tcp sockets):
+        #       fastcgi_pass 127.0.0.1:9000;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #       deny all;
+        #}
+}
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#       listen 80;
+#       listen [::]:80;
+#
+#       server_name example.com;
+#
+#       root /var/www/example.com;
+#       index index.html;
+#
+#       location / {
+#               try_files $uri $uri/ =404;
+#       }
+#}
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ sudo iptables -F^C
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ nano
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ sudo nano
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ sudo service nginx restart
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ ls
+default  laravel
+ubuntu@ip-172-31-28-127:/etc/nginx/sites-enabled$ cd /var/www/laravel
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ls
+README.md  composer.json  index.php          public      storage
+app        composer.lock  package-lock.json  resources   tests
+artisan    config         package.json       routes      vendor
+bootstrap  database       phpunit.xml        server.php  webpack.mix.js
+ubuntu@ip-172-31-28-127:/var/www/laravel$ php artisan serve --port=1213
+Starting Laravel development server: http://127.0.0.1:1213
+[Sun Mar 17 16:57:08 2024] PHP 7.4.3-4ubuntu2.20 Development Server (http://127.0.0.1:1                                                                                          213) started
+[Sun Mar 17 16:57:14 2024] 127.0.0.1:41904 Accepted
+[Sun Mar 17 16:57:14 2024] 127.0.0.1:41904 Closing
+^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/systems/system/laravel.service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/systemd/system/laravel.service                                                                                          ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel
+laravel: unrecognized service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel.service
+laravel.service: unrecognized service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel.service status
+Unit laravel.service.service could not be found.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel status
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor preset: ena>
+     Active: inactive (dead)
+
+Mar 17 17:05:09 ip-172-31-28-127 systemd[1]: /etc/systemd/system/laravel.service:7: Fa>
+lines 1-5/5 (END)
+
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel restart
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel status
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor preset: ena>
+     Active: failed (Result: exit-code) since Sun 2024-03-17 17:05:49 UTC; 2s ago
+    Process: 30947 ExecStart=/usr/bin/php /var/www/laravel/artisan serve --port=1213 (>
+   Main PID: 30947 (code=exited, status=200/CHDIR)
+
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: Started Sample App.
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Changing to the requ>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Failed at step CHDIR>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Main process exited, cod>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Failed with result 'exit>
+lines 1-11/11 (END)
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor pres>
+     Active: failed (Result: exit-code) since Sun 2024-03-17 17:05:49 UTC; 2s a>
+    Process: 30947 ExecStart=/usr/bin/php /var/www/laravel/artisan serve --port>
+   Main PID: 30947 (code=exited, status=200/CHDIR)
+
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: Started Sample App.
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Changing to t>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Failed at ste>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Main process exit>
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Failed with resul>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-11/11 (END)...skipping...
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2024-03-17 17:05:49 UTC; 2s ago
+    Process: 30947 ExecStart=/usr/bin/php /var/www/laravel/artisan serve --port=1213 (code=exited, status=200/CHDIR)
+   Main PID: 30947 (code=exited, status=200/CHDIR)
+
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: Started Sample App.
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Changing to the requested working directory failed: No such file or directory
+Mar 17 17:05:49 ip-172-31-28-127 systemd[30947]: laravel.service: Failed at step CHDIR spawning /usr/bin/php: No such file or directory
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Main process exited, code=exited, status=200/CHDIR
+Mar 17 17:05:49 ip-172-31-28-127 systemd[1]: laravel.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-11/11 (END)
+^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ whareis php
+
+Command 'whareis' not found, did you mean:
+
+  command 'whereis' from deb util-linux (2.34-0.1ubuntu9.4)
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-28-127:/var/www/laravel$ Whareis
+Whareis: command not found
+ubuntu@ip-172-31-28-127:/var/www/laravel$ whereis php
+php: /usr/bin/php7.4 /usr/bin/php /usr/lib/php /etc/php /usr/share/php7.4-mbstring /usr/share/php7.4-xml /usr/share/php7.4-bcmath /usr/share/php7.4-readline /usr/share/php7.4-curl /usr/share/php7.4-zip /usr/share/php7.4-json /usr/share/php7.4-common /usr/share/php7.4-gd /usr/share/php /usr/share/php7.4-mysql /usr/share/php7.4-opcache /usr/share/man/man1/php.1.gz
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/systemd/system/laravel.servicesudo nano /etc/systemd/system/laravel.service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/systemd/system/laravel.service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel restart
+Warning: The unit file, source configuration file or drop-ins of laravel.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ systemctl daemon-reload
+==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ===
+Authentication is required to reload the systemd state.
+Authenticating as: Ubuntu (ubuntu)
+Password:
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo systemctl daemon-reload
+ubuntu@ip-172-31-28-127:/var/www/laravel$  sudo systemctl daemon-reload
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel restart
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel status
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2024-03-17 17:10:55 UTC; 4s ago
+    Process: 31120 ExecStart=/usr/bin/php7.4 /var/www/laravel/artisan serve --port=1213 (code=exited, status=200/CHDIR)
+   Main PID: 31120 (code=exited, status=200/CHDIR)
+
+Mar 17 17:10:55 ip-172-31-28-127 systemd[1]: Started Sample App.
+Mar 17 17:10:55 ip-172-31-28-127 systemd[31120]: laravel.service: Changing to the requested working directory failed: No such file or directory
+Mar 17 17:10:55 ip-172-31-28-127 systemd[31120]: laravel.service: Failed at step CHDIR spawning /usr/bin/php7.4: No such file or directory
+Mar 17 17:10:55 ip-172-31-28-127 systemd[1]: laravel.service: Main process exited, code=exited, status=200/CHDIR
+Mar 17 17:10:55 ip-172-31-28-127 systemd[1]: laravel.service: Failed with result 'exit-code'.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ /usr/bin/php7.4 /var/www/laravel/artisan serve --port=1213
+Starting Laravel development server: http://127.0.0.1:1213
+[Sun Mar 17 17:12:25 2024] PHP 7.4.3-4ubuntu2.20 Development Server (http://127.0.0.1:1213) started
+^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo nano /etc/systemd/system/laravel.service
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel restart
+Warning: The unit file, source configuration file or drop-ins of laravel.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo systemctl daemon-reload
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel restart
+ubuntu@ip-172-31-28-127:/var/www/laravel$ sudo service laravel status
+● laravel.service - Sample App
+     Loaded: loaded (/etc/systemd/system/laravel.service; disabled; vendor preset: enabled)
+     Active: active (running) since Sun 2024-03-17 17:13:43 UTC; 6s ago
+   Main PID: 31176 (php7.4)
+      Tasks: 2 (limit: 1126)
+     Memory: 31.1M
+     CGroup: /system.slice/laravel.service
+             ├─31176 /usr/bin/php7.4 /var/www/laravel/artisan serve --port=1213
+             └─31183 /usr/bin/php7.4 -S 127.0.0.1:1213 /var/www/laravel/server.php
+
+Mar 17 17:13:43 ip-172-31-28-127 systemd[1]: Started Sample App.
+Mar 17 17:13:44 ip-172-31-28-127 laravel-sample[31176]: Starting Laravel development server: http://127.0.0.1:1213
+Mar 17 17:13:44 ip-172-31-28-127 laravel-sample[31176]: [Sun Mar 17 17:13:44 2024] PHP 7.4.3-4ubuntu2.20 Development Server (http://127.0.0.1:1213) started
+Mar 17 17:13:50 ip-172-31-28-127 systemd[1]: /etc/systemd/system/laravel.service:13: Missing '=', ignoring line.
+ubuntu@ip-172-31-28-127:/var/www/laravel$ ^C
+ubuntu@ip-172-31-28-127:/var/www/laravel$
