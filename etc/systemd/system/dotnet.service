@@ -3,6 +3,7 @@ Description=Dhiraagu eKYC API - UAT
 [Service]
 WorkingDirectory=/var/www/dhiraagu-ekyc-uat/core-api
 ExecStart=/usr/bin/dotnet /var/www/dhiraagu-ekyc-uat/core-api/DHIRAAGU_CORE.dll
+#ExecStart=/usr/bin/dotnet /var/www/dhiraagu-ekyc-uat/core-api/DHIRAAGU_CORE.dll --urls=http://localhost:5000
 RestartSec=10 # Restart service after 10 seconds if the dotnet service crashes:
 SyslogIdentifier=dhiraagu-ekyc-core-api-uat
 Environment=ASPNETCORE_ENVIRONMENT=Production
