@@ -73,6 +73,8 @@ This command stops the Nginx service. Use it to temporarily halt Nginx operation
 
 ---
 
+[Link Text](readme.sh)
+
 
 
 
