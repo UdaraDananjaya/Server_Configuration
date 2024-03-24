@@ -1,6 +1,9 @@
 nano /etc/nginx/nginx.conf
-service nginx restart
-service nginx status
+
+sudo service nginx restart
+sudo service nginx status
+sudo service nginx start
+sudo service nginx stop
 
  sudo systemctl daemon-reload
 whereis php
