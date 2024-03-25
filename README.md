@@ -75,4 +75,14 @@
 These commands provide a comprehensive toolkit for server configuration, management, and file system navigation.
 
  -  [Linux Service](Service.md)
- -  [Linux Service](Service.md)
+	- [Laravel Service](etc\systemd\system\laravel.service)
+    - [ASP.NET Service](etc\systemd\system\dotnet.service) 
+    - [Vue Service](etc\systemd\system\vue.service) 
+- Notes
+	-  [Laravel Note](Laravel.md)
+	-  [ASP.NET Note](ASP.NET.md)
+	-  [Mariadb Note](Mariadb.md)
+	-  [NodeJS Note](NodeJS.md)
+
+ - Others
+	- [Other Note](Other.md)

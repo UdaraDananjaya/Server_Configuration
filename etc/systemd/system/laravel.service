@@ -1,13 +1,11 @@
 [Unit]
-Description=Sample App
+Description=Sample Laravel App
 
 [Service]
 WorkingDirectory=/var/www/laravel
 ExecStart=/usr/bin/php7.4 /var/www/laravel/artisan serve --port=1213
-RestartSec=10 # Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
 SyslogIdentifier=laravel-sample
 
 [Install]
 WantedBy=multi-user.target
-
-service nginx restart

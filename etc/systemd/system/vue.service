@@ -1,13 +1,13 @@
 [Unit]
-Description=Dhiraagu eKYC Admin App - UAT
+Description=Sample Vue App
 
 [Service]
-WorkingDirectory=/var/www/dhiraagu-ekyc-uat/admin-app
-ExecStart=/usr/local/bin/serve --single /var/www/dhiraagu-ekyc-uat/admin-app -p 4010
+WorkingDirectory=/var/www/vue
+ExecStart=/usr/local/bin/serve --single /var/www/vue -p 4010
 Restart=always
-RestartSec=10 # Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
 KillSignal=SIGINT
-SyslogIdentifier=dhiraagu-ekyc-admin-app-vue-uat
+SyslogIdentifier=vue-sample
 
 [Install]
 WantedBy=multi-user.target

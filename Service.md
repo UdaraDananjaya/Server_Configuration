@@ -7,19 +7,17 @@
 	```config
 	[Unit]
 	Description=My Custom Service
-	After=network.target
 
 	[Service]
-	Type=simple
+	WorkingDirectory=/var/www/
 	ExecStart=/usr/bin/python3 /path/to/your/script.py
+	RestartSec=10
 	Restart=always
 
 	[Install]
 	WantedBy=multi-user.target
 	```
--  *Explanation:* This example creates a systemd service named `{service_name}`. Adjust the `Description`, `ExecStart`, and other parameters according to your specific service requirements. The `After` directive ensures the service starts after the network is up, and `Restart=always` ensures the service restarts automatically if it crashes.
-
-  
+-  *Explanation:* This systemd service file outlines the configuration for a custom service named "My Custom Service". The Unit section provides a brief description of the service. In the Service section, crucial parameters are defined: the working directory, set to `/var/www/`, from which the service will operate; the command to execute the service, specified as `/usr/bin/python3 /path/to/your/script.py`, indicating the execution of a Python script using Python 3; a restart delay of 10 seconds (`RestartSec=10`), and a restart policy set to `always`, ensuring the service restarts automatically upon exit. The Install section specifies that this service should be started when the system enters the `multi-user.target`, ensuring it launches automatically upon system boot. This comprehensive setup ensures the reliable operation and automatic management of the designated custom service within the system environment.
 
 2.  **Enabling and Starting the Service:**
 
