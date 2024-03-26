@@ -83,6 +83,7 @@ These commands provide a comprehensive toolkit for server configuration, managem
 	-  [ASP.NET Note](ASP.NET.md)
 	-  [Mariadb Note](Mariadb.md)
 	-  [NodeJS Note](NodeJS.md)
+   	-  [Nginx Note](Nginx.md)
 
  - Others
 	- [Other Note](Other.md)
