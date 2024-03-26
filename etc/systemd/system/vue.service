@@ -1,0 +1,13 @@
+[Unit]
+Description=Sample Vue App
+
+[Service]
+WorkingDirectory=/var/www/vue
+ExecStart=/usr/local/bin/serve --single /var/www/vue -p 4010
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=vue-sample
+
+[Install]
+WantedBy=multi-user.target

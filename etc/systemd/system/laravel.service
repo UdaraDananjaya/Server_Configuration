@@ -1,0 +1,11 @@
+[Unit]
+Description=Sample Laravel App
+
+[Service]
+WorkingDirectory=/var/www/laravel
+ExecStart=/usr/bin/php7.4 /var/www/laravel/artisan serve --port=1213
+RestartSec=10
+SyslogIdentifier=laravel-sample
+
+[Install]
+WantedBy=multi-user.target

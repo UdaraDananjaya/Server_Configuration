@@ -1,0 +1,12 @@
+[Unit]
+Description=Sample ASPNET App
+
+[Service]
+WorkingDirectory=/var/www/aspnet
+ExecStart=/usr/bin/dotnet /var/www/aspnet/core-api/APP_CORE.dll
+RestartSec=10
+SyslogIdentifier=aspnet-sample
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target
