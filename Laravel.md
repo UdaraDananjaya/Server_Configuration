@@ -6,6 +6,13 @@
 sudo apt -y install php7.4
 sudo apt install php-fpm php-mysql -y
 ```
+### In Ubuntu 22 Add PHP Repository To add the PHP repository containing PHP 7.4, open a terminal and run the following command:
+
+```bash
+sudo add-apt-repository ppa:ondrej/php
+sudo apt -y install php7.4
+sudo apt install php-fpm php-mysql -y
+```
 
 **Checking PHP version:**
 ```bash
